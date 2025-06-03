@@ -1,0 +1,78 @@
+@import-normalize;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+body {
+  background-color: rgb(21, 21, 21);
+  color:  rgb(216, 215, 215);
+  font-family: Roboto, sans-serif;
+  height: 100%;
+  /* transition: background-color 0.3s ease, color 0.3s ease; */
+}
+
+.list {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+
+  &:hover {
+    color: rgb(5, 106, 238);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}

@@ -1,0 +1,42 @@
+# 🚫 Не додавай до гіта
+
+# ⛔ Директорії залежностей
+node_modules/
+
+# 📦 Білд-результати
+dist/
+dist-ssr/
+
+# ⚙️ TypeScript кеш
+*.tsbuildinfo
+
+# 📒 Логи
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 🌐 Локальні змінні середовища
+.env
+.env.local
+.env.*.local
+
+# 🧠 IDE/Editor
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 💻 Системні файли
+.DS_Store
+Thumbs.db
+*.pid
+*.seed
+*.pid.lock
