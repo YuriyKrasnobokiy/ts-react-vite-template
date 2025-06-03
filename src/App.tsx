@@ -1,11 +1,19 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
+import React, { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import './i18n';
+import About from "./pages/About";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import { useTranslation } from "react-i18next";
 
 const App: React.FC = () => {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
   return (
     <>
       <Routes>

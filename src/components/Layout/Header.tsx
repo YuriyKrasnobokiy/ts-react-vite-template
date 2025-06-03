@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
+  const { t } = useTranslation();
   return (
-    <div>Header</div>
+    <div>{t("header")}</div>
   )
 }
 
