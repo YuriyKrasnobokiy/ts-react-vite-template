@@ -1,6 +1,11 @@
 {
   "welcome": "Welcome",
   "about": "About us",
+  "home": "Home page",
   "header": "This is header",
-  "footer": "This is footer"
+  "footer": "This is footer",
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  }
 }

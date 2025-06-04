@@ -9,10 +9,12 @@ const Sidebar: React.FC = () => {
   };
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column'}}>
-      <nav style={{ display: "flex", flexDirection: "column", flex: 1 }}>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
+      <p>LOGO</p>
+
+      <nav style={{ display: "flex", flexDirection: "column", }}>
+        <Link to="/">{t('nav.home')}</Link>
+        <Link to="/about">{t('nav.about')}</Link>
       </nav>
 
       <div>

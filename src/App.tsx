@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import { useTranslation } from "react-i18next";
+import GlobalStyles from "./GlobalStyles";
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
@@ -16,13 +17,14 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
+      <GlobalStyles />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
     </>
   );
 };

@@ -2,17 +2,21 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Outlet } from "react-router-dom";
 
-const Layout: React.FC = () => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({children}) => {
+
   return (
-    <div style={{display: 'flex', height: '95dvh'}}>
+    <div style={{display: 'flex', height: '100vh'}}>
       <Sidebar />
-      <div style={{display: 'flex', flexDirection: 'column', flex: 3}}>
+      <div style={{display: 'flex', flexDirection: 'column', flex: 3, justifyContent: 'space-between'}}>
         <Header />
-        <main>
-          <Outlet />
-        </main>
+          <main>
+            {children}
+          </main>
         <Footer />
       </div>
     </div>
