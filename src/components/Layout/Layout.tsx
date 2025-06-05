@@ -1,7 +1,8 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Header from "./Header";
-import Footer from "./Footer";
+import Sidebar from "./Sidebar/Sidebar";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
+import { LayoutMainWrapper, LayoutWrapper } from "./Layout.styled";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -10,16 +11,16 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({children}) => {
 
   return (
-    <div style={{display: 'flex', height: '100vh'}}>
+    <LayoutWrapper >
       <Sidebar />
-      <div style={{display: 'flex', flexDirection: 'column', flex: 3, justifyContent: 'space-between'}}>
+      <LayoutMainWrapper >
         <Header />
           <main>
             {children}
           </main>
         <Footer />
-      </div>
-    </div>
+      </LayoutMainWrapper>
+    </LayoutWrapper>
   );
 };
 
