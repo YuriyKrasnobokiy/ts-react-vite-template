@@ -4,8 +4,10 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     margin: 0;
-    background-color: rgb(21, 21, 21);
-    color:  rgb(216, 215, 215);
+    /* background-color: rgb(21, 21, 21);
+    color:  rgb(216, 215, 215); */
+    background-color: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
     font-family: Roboto, sans-serif;
     height: 90dvh;
     transition: all 0.3s ease;

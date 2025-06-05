@@ -1,25 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ThemeBtn, ThemeSwitchWrapper } from './ThemeSwitch.styled'
 import { MdOutlineNightsStay, MdOutlineWbSunny } from "react-icons/md";
+import { useTheme } from '../../../hooks/useTheme';
 
 const ThemeSwitch: React.FC = () => {
-  const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('dark');
-
-  const themeChangeHandler: () => void = () => {
-    setCurrentTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
+  const { isDark, toggleTheme } = useTheme();
 
   return (
     <ThemeSwitchWrapper>
-      <ThemeBtn onClick={themeChangeHandler}>
-          {currentTheme === "dark" ? (
-            <MdOutlineNightsStay />
-          ) : (
+      <ThemeBtn onClick={toggleTheme}>
+          {isDark ? (
             <MdOutlineWbSunny />
+          ) : (
+            <MdOutlineNightsStay />
           )}
         </ThemeBtn>
     </ThemeSwitchWrapper>
   )
 }
 
-export default ThemeSwitch
+export default ThemeSwitch;

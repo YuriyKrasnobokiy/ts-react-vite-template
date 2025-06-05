@@ -7,6 +7,7 @@ import './i18n';
 import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import { ThemeProviderWrapper } from "./contexts/ThemeContext";
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
@@ -16,6 +17,7 @@ const App: React.FC = () => {
 
   return (
     <>
+    <ThemeProviderWrapper>
       <GlobalStyles />
         <Layout>
           <Routes>
@@ -24,6 +26,7 @@ const App: React.FC = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
+    </ThemeProviderWrapper>
     </>
   );
 };
