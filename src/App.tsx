@@ -1,13 +1,14 @@
-import React, { useEffect } from "react";
+import React, { lazy, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import GlobalStyles from "./GlobalStyles";
 import './i18n';
-import About from "./pages/About";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
 import { ThemeProviderWrapper } from "./contexts/ThemeProviderWrapper";
+
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
