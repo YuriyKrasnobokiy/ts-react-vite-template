@@ -7,7 +7,7 @@ import './i18n';
 import About from "./pages/About";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import { ThemeProviderWrapper } from "./contexts/ThemeContext";
+import { ThemeProviderWrapper } from "./contexts/ThemeProviderWrapper";
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();

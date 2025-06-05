@@ -2,7 +2,6 @@ import 'styled-components';
 import { ThemeType } from './theme';
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends ThemeType {
-    
-  }
+  // eslint-disable-next-line
+  export interface DefaultTheme extends ThemeType {}
 }
