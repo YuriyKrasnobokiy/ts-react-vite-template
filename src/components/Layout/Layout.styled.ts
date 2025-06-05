@@ -10,4 +10,5 @@ export const LayoutMainWrapper = styled.div`
   flex-direction: column;
   flex: 3;
   justify-content: space-between;
+  padding: 0 16px;
 `

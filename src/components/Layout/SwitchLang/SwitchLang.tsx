@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { SwitchLangWrap } from "./SwitchLang.styled";
+import { SwitchLangBtn, SwitchLangWrap } from "./SwitchLang.styled";
 
 const SwitchLang: React.FC = () => {
   const { i18n } = useTranslation();
@@ -10,8 +10,8 @@ const SwitchLang: React.FC = () => {
 
   return (
     <SwitchLangWrap>
-      <button onClick={() => switchLanguage("ua")}>UA</button>
-      <button onClick={() => switchLanguage("en")}>EN</button>
+      <SwitchLangBtn onClick={() => switchLanguage("ua")}>UA</SwitchLangBtn>
+      <SwitchLangBtn onClick={() => switchLanguage("en")}>EN</SwitchLangBtn>
     </SwitchLangWrap>
   );
 };

@@ -10,4 +10,8 @@ export const ThemeBtn = styled.button `
   justify-content: center;
   color: inherit;
   background-color: transparent;
+  width: 36px;
+  margin: 0;
+  padding: 8px;
+  font-size: 24px;
 `

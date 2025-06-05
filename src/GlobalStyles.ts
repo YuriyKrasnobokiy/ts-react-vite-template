@@ -4,12 +4,11 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     margin: 0;
-    /* -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; */
     background-color: rgb(21, 21, 21);
     color:  rgb(216, 215, 215);
     font-family: Roboto, sans-serif;
     height: 90dvh;
+    transition: all 0.3s ease;
   }
 
   *,
