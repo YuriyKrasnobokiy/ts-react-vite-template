@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   
   return (
     <>
-      {loading ? <Loader /> : <h2>{t('home')}</h2>}
+      {loading ? <Loader overlay={true}/> : <h2>{t('home')}</h2>}
     </>
   )
 }

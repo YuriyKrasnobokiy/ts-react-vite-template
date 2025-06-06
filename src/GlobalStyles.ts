@@ -2,14 +2,29 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 
+html, body {
+  overflow-y: scroll; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+html, body {
+  overflow-y: scroll;       
+  scrollbar-width: none;    
+  -ms-overflow-style: none; 
+  scroll-behavior: smooth;  
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;    
+}
+
   body {
     margin: 0;
-    /* background-color: rgb(21, 21, 21);
-    color:  rgb(216, 215, 215); */
     background-color: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
     font-family: Roboto, sans-serif;
-    height: 90dvh;
     transition: all 0.3s ease;
   }
 
@@ -66,13 +81,6 @@ const GlobalStyles = createGlobalStyle`
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 40px;
-  }
-
-  .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
   }
 
   .section {
