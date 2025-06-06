@@ -1,6 +1,7 @@
 import React from "react";
 import { ClipLoader } from "react-spinners";
 import { LoaderOverlay } from "./Loader.styled";
+import { useTheme } from "styled-components";
 
 interface LoaderProps {
   size?: number;
@@ -11,15 +12,18 @@ interface LoaderProps {
 
 const Loader: React.FC<LoaderProps> = ({
   size = 50,
-  color = "#36d7b7",
+  color,
   loading = true,
   overlay = true,
 }) => {
+  const theme = useTheme();
+  const loaderColor = color || theme.colors.text;
+  
   return (
     <>
       {overlay ? (
         <LoaderOverlay>
-          <ClipLoader size={size} color={color} loading={loading} />
+          <ClipLoader size={size} color={loaderColor} loading={loading} />
         </LoaderOverlay>
       ) : (
         <ClipLoader size={size} color={color} loading={loading} />
