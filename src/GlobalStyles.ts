@@ -3,13 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
 
 html, body {
-  overflow-y: scroll; 
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
-}
-
-html, body {
-  overflow-y: scroll;       
+  overflow: hidden;       
   scrollbar-width: none;    
   -ms-overflow-style: none; 
   scroll-behavior: smooth;  

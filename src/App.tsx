@@ -8,7 +8,7 @@ import { ThemeProviderWrapper } from "./contexts/ThemeProviderWrapper";
 import Loader from "./components/Loader/Loader";
 
 const Home = lazy(() => import("./pages/Home"));
-const About = lazy(() => import("./pages/About"));
+const About = lazy(() => import("./pages/About/About"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const App: React.FC = () => {
